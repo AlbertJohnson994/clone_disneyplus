@@ -12,7 +12,7 @@
             <h1 class="hero__content__branding">
                 <img src="src/images/disneyplus.svg" alt="Disney+">
             </h1>
-            <h3 class="title--smal">
+            <h3 class="title--small">
                As melhores historias em um so lugar. 
             </h3>
             <p>
@@ -25,20 +25,126 @@
             <ul class="hero__content__combos">
                 <li class="hero__content__combos__combo">
                     <img src="src/images/logos/disney_star_plus.png" alt="Disney+ - star+ - combo+">
-                    <button>Assine Agora</button>
+                    <button class="button">Assine Agora</button>
                     <span class="text">R$ 45,90/mes*</span>
                 </li>
                 <li class="hero__content__combos__combo">
                     <img src="src/images/logos/disney_star_plus.png" alt="Disney+ - star+ - combo+">
-                    <button>Assine Agora</button>
+                    <button class="button">Assine Agora</button>
                     <span class="text">R$ 5,90/mes*</span>
                 </li>
             </ul>
             <p class="text--small">
-                *O preco pode variar caso a assinatura seja feito atrves do outras plataformas.
+                *O preco pode variar caso a assinatura seja feito atraves do outras plataformas.
             </p>
         </div>
     </section>
-    
+    <nav class="shows__tabs">
+        <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is-active">
+            Em breve
+        </button>
+        <button data-tab-button="mais_populares" class="shows__tabs__button">
+            Mais Populares
+        </button>
+        <button data-tab-button="Star_plus" class="shows__tabs__button">
+            Mais no Star+
+        </button>
+    </nav>
+    <section class="shows">
+        <ul data-tab-id="em_breve" class="shows__list shows__list--is-active">
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+        </ul>
+        <ul data-tab-id="mais_populares" class="shows__list">
+            <li class="shows__list__item">
+                <img src="src/images/mais_populares/obi_wan.jpg" alt="obi_wan">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+        </ul>
+        <ul data-tab-id="Star_plus" class="shows__list">
+            <li class="shows__list__item">
+                <img src="src/images/mais_no_star_plus/libertadores.jpg" alt="libertadores">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="spider">
+            </li>
+        </ul>
+    </section>
+    <section class="plans">
+        <h2 class="title--big">Escolha seu plano</h2>
+        <ul class="plans__list">
+            <li class="plans__list__item">
+                <img src="src/images/logos/disneyplus_underline.png" alt="Disney+">
+                <strong class="title--small">R$ 45,90;mes*</strong>
+                <p class="text">
+                   Assine Disney+ e Star+ juntos. Economize e aprovite agora os dois servicos por um preco unico.
+                </p>
+                <button class="button">Assine Agora</button>
+            </li>
+            <li class="plans__list__item">
+                <img src="src/images/logos/disney_star_plus_sm.png" alt="Disney+">
+                <strong class="title--small">R$ 55,90;mes*</strong>
+                <p class="text">
+                    Disney+, Star+ e STARZPLAY em um plano especial. Assine agora os tres servicos juntos.
+                </p>
+                <button class="button">Assine Agora</button>
+            </li>
+            <li class="plans__list__item">
+                <img src="src/images/logos/disney_star_plus_starzplay_underline.png" alt="Disney+">
+                <strong class="title--small">R$ 27,90;mes*</strong>
+                <p class="text--big">
+                    No Disney+ voce encontra as ultimas estreias do cima, originais e classicos inesqueciveis.
+                </p>
+                <button class="button">Assine Agora</button>
+            </li>
+        </ul>
+        <p class="text--small">
+            *O preco pode variar caso a assinatura seja feitaa atraves de outras plataformas.
+        </p>
+
+    </section>
+    <script src="./src/main.js"></script>  
 </body>
 </html>
