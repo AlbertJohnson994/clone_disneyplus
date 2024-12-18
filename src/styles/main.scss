@@ -7,9 +7,6 @@
 @use 'footer';
 @use 'header';
 
-
-
-
 @font-face {
     font-family: Avenir;
     src: url(../../assets/fonts/Avenir-Regular.woff2);
@@ -22,14 +19,12 @@
     font-weight: 700;
 }
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
     list-style: none;
-
 }
 
 body {
@@ -51,7 +46,7 @@ body {
     @include text(18px);
 
     @media (max-width: 768px) {
-        @include text(15px)
+        @include text(15px);
     }
 }
 
@@ -59,7 +54,7 @@ body {
     @include text;
 
     @media (max-width: 768px) {
-        @include text(14px)
+        @include text(14px);
     }
 }
 
@@ -67,7 +62,7 @@ body {
     @include text(12px);
 
     @media (max-width: 768px) {
-        @include text(11px)
+        @include text(11px);
     }
 }
 
@@ -81,7 +76,7 @@ body {
     @include title(44px);
 
     @media (max-width: 768px) {
-        @include title(26px)
+        @include title(26px);
     }
 }
 
@@ -89,20 +84,17 @@ body {
     @include title;
 
     @media (max-width: 768px) {
-        @include title(24px)
+        @include title(24px);
     }
 }
 
 .title--small {
     @include title(28px);
 
-
     @media (max-width: 768px) {
-        @include title(22px)
+        @include title(22px);
     }
 }
-
-
 
 .button {
     display: flex;
@@ -117,23 +109,24 @@ body {
     text-decoration: none;
     padding: 8px 14px;
     letter-spacing: 1px;
-    border: 1px solid  variaveis.$corDeFundoBotaoPrimario;
+    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
 
 
-
-    &--secondary {
-       background-color: variaveis.$corDeFundoBotaoSecondary;
-       border-color: variaveis.$corDeFundoBotaoSecondary; 
+// .button {
+//   &:hover {
+//     background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 10%);
+//   }
+// }
 
     
-//   &:hover {
-//     background-color: lighten(variaveis.$corDeFundoBotaoSecondary, 0.03);
-//   }
+    &--secondary {
+        background-color: variaveis.$corDeFundoBotaoSecondary;
+        border-color: variaveis.$corDeFundoBotaoSecondary;
     }
 
     &--dark {
         background-color: variaveis.$corDeFundoBotaoDark, 0.8;
-        border-color: variaveis.$corTextoSecundario; 
+        border-color: variaveis.$corTextoSecundario;
 
         &:hover {
             background-color: variaveis.$corTextoSecundario;
@@ -142,7 +135,6 @@ body {
     }
 }
 
-
 .image-text-section {
     padding: 5.6vw;
     display: grid;
@@ -150,9 +142,8 @@ body {
     align-items: center;
 
     @media (max-width: 768) {
-        display:block;
+        display: block;
     }
-
 
     img {
         max-width: 100%;
@@ -164,10 +155,8 @@ body {
         h2 {
             margin-bottom: 24px;
         }
-
     }
 
-    
     &--image-full-width {
         display: block;
         position: relative;
@@ -178,19 +167,55 @@ body {
 
         &__text_container {
             position: absolute;
-            top: 0;
+            top: 50%;
             left: 50%;
             width: calc(50% - 5.6vw);
-            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            transform: translate(-50%, -50%);
+            gap: 1rem;
+            align-items: center;
+            text-align: center;
 
-            @media (max-width: 768) {
-               position: relative;
-               left: 0;
-               height: 100%;
+            h2, h3, p {
+                margin: 0;
+                position: static;
+            }
+
+            @media (max-width: 768px) {
+                .image-text-section--image-full-width__text_container {
+                    position: relative;
+                    left: auto;
+                    top: auto;
+                    transform: none;
+                    width: 100%;
+                    gap: 1rem;
+                    text-align: center;
+                }
+
+                .title--big {
+                    font-size: 26px;
+                }
+
+                .text--big {
+                    font-size: 15px;
+                }
             }
         }
     }
+}
+
+/* Centraliza o texto e aplica cursor pointer nos botões dos combos */
+.hero__content__combos__combo button {
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Centraliza o texto e aplica cursor pointer nos botões dos planos */
+.plans button {
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
 }

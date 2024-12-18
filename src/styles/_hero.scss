@@ -10,7 +10,7 @@
 
 
     @media (max-width: 768px) {
-       background-image: url('/src/images/fundo_rei_leao_celular.png') ;
+       background-image: url('/src/images/hero_celular.jpeg') ;
        padding-top: calc(50vw + 25px);
        background-size: contain;
        background-repeat: no-repeat;
@@ -60,6 +60,7 @@
 
              &__combo {
             width: calc(50% - 12px);
+            text-align: cent;
 
             @media (max-width: 768px) {
                 width: 100%;

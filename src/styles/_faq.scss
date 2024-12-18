@@ -19,7 +19,6 @@
                 cursor: pointer;
                 position: relative;
 
-
                 &::after {
                     content: '+';
                     position: absolute;
@@ -30,28 +29,27 @@
                     align-items: center;
                     font-size: 40px;
                 }
-    
             }
 
-           
             &__answer {
-                height: 0px;
+                height: 0;
                 overflow: hidden;
                 padding: 0 24px;
-                transition: height, .5s ease;
+                transition: height 0.5s ease;
             }
 
             &--is-open {
                 .faq__questions__item__question::after {
                     content: '-';
-                 }
+                }
+
                 .faq__questions__item__answer {
-                height: auto;
-                padding-bottom: 24px;
-                transition: height, .5s ease;
-            }
-                
+                    height: auto;
+                    padding-bottom: 24px;
+                    transition: height 0.5s ease;
+                }
             }
         }
     }
 }
+
